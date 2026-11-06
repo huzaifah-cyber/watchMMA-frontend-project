@@ -1,5 +1,5 @@
 <p>
-  Welcome to this repository. I'm surprised you're here. But since you're here, let me tell you what this is...
+  Welcome to this repository.<b> I'm surprised you're here</b>. But since you're here, let me tell you what this is...
 </p>
 <p>
   It's a hand-coded frontend project which I coded with my own hands. It has everything one can dream of: CSS, HTML, and Javascript.
