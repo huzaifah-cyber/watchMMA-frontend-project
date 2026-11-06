@@ -17,8 +17,8 @@
 <p>This website was built using <mark>HTML</mark>, <mark>CSS</mark> and <mark>Javascript</mark>.</p>
 <p><strong>Watch the Demo on YT 👇👇</strong></p>
 
-<p align="center">
+<p align="left">
   <a href="https://youtu.be/zZuBAHFDV9A">
-    <img src="images/pic.png" alt="Click to watch the demo on Youtube!" width="100%">
+    <img src="images/pic.png" alt="Click to watch the demo on Youtube!" width="50%" height="35%">
   </a>
 </p>
