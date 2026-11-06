@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!--This HTML file is linked to style.css for styling-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="grid-parent">
+    <!--Navigation is used in all pages and connects them together-->
+    <nav>
+      <ul>
+        <li><a class="nav-class" href="index.html">Index</a></li>
+        <li><a class="nav-class" href="about.html">About</a></li>
+        <li><a class="nav-class" href="contact.html">Contact</a></li>
+        <li><a class="nav-class" href="latest.html">Latest</a></li>
+        <li><a class="nav-class" href="weather.html">Weather</a></li>
+      </ul>
+    </nav>
+    <header>
+      <img
+        class="logo"
+        src="images/icon.png"
+        alt="WatchMMA logo featuring a fist"
+      />
+    </header>
+    <main>
+      <h1>What's the Weather?</h1>
+
+      <!--This form takes latitude and longitude coordinates from the user-->
+      <form id="weather" novalidate>
+        <p>
+          <!--A latitude number between -90 and 90 is required-->
+          <label for="latitude">Latitude:</label>
+          <input
+            id="latitude"
+            name="latitude"
+            type="number"
+            min="-90"
+            max="90"
+            step="any"
+            required
+            placeholder="Enter a decimal number"
+          />
+        </p>
+
+        <p>
+          <!--A longitude number between -180 and 180 is required-->
+          <label for="longitude">Longitude:</label>
+          <input
+            id="longitude"
+            name="longitude"
+            type="number"
+            min="-180"
+            max="180"
+            step="any"
+            required
+            placeholder="Enter a decimal number"
+          />
+        </p>
+
+        <button type="submit">Get Weather</button>
+      </form>
+
+      <!--This paragraph displays loading and success messages-->
+      <p id="weather-status"></p>
+
+      <!--This paragraph displays errors if the coordinates or API request are invalid-->
+      <p id="weather-error"></p>
+
+      <!--This section displays the weather information retrieved from the API-->
+      <section id="weather-results" hidden>
+        <h3 id="weather-h3">Current Weather</h3>
+        <p id="location"></p>
+        <p id="temperature"></p>
+        <p id="description"></p>
+      </section>
+    </main>
+
+    <!--The footer contains authorship information and my email-->
+    <footer>
+      <p>
+        Author: M. Huzaifah
+        <br />
+        <a class="contact" href="mailto:redacted@redacted.edu"
+          >redacted@redacted.edu</a
+        >
+        <br />
+      </p>
+      <p>This website is built using <mark>HTML</mark> and <mark>CSS</mark>.</p>
+    </footer>
+    <!--This line links the weather.html file to the JavaScript file specified in the source-->
+    <script src="weather.js"></script>
+  </body>
+</html>

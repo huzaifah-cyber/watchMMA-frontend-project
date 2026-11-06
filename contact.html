@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <!--This is the contact us page of our website-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <!--This HTML file is linked to style.css for styling-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--The body element acts like a grid parent-->
+  <body class="grid-parent">
+    <!--Navigation is used in all pages and connects them together-->
+    <nav>
+      <ul>
+        <li><a class="nav-class" href="index.html">Index</a></li>
+        <li><a class="nav-class" href="about.html">About</a></li>
+        <li><a class="nav-class" href="contact.html">Contact</a></li>
+        <li><a class="nav-class" href="latest.html">Latest</a></li>
+        <li><a class="nav-class" href="weather.html">Weather</a></li>
+      </ul>
+    </nav>
+    <header>
+      <img
+        class="logo"
+        src="images/icon.png"
+        alt="Website Main Icon(Fist with MMA written and a dark background"
+      />
+    </header>
+
+    <main>
+      <h1>Contact Us</h1>
+
+      <h2>Get in Touch</h2>
+      <p>
+        We would love to hear what you have to say about our website and its
+        functions.<br />We welcome all feedback from our viewers, whether it is
+        a bug or another feature that you want. Our team will get back in under
+        48 hours.<br />Have a great day!
+      </p>
+
+      <h2>Contact Information</h2>
+      <p>
+        <a class="contact" href="mailto:redacted@redacted.edu">
+          Contact us by Email
+        </a>
+      </p>
+
+      <p>
+        Visit UFC:
+        <a class="contact" href="https://www.ufc.com/" target="_blank">UFC</a>
+      </p>
+
+      <p>
+        Visit PFL:
+        <a class="contact" href="https://pflmma.com/" target="_blank">PFL</a>
+      </p>
+
+      <h3>Contact & Feedback Form</h3>
+      <!--HTML form for receiving customer feedback and contact details-->
+      <form id="webForm" action="#" novalidate>
+        <!--Fieldset for receiving personal details-->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <p>
+            <!--A name is required with length between 3 and 50 characters -->
+            <label for="full-name">Full Name:</label>
+            <input
+              id="full-name"
+              type="text"
+              name="full-name"
+              minlength="3"
+              maxlength="50"
+              required
+              placeholder="e.g: Hamza Khan"
+            />
+          </p>
+          <span id="name-error" class="error"></span>
+
+          <p>
+            <!-- Requires an email address in the right format-->
+            <label for="email">Email:</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              placeholder="e.g: hamza@ufc.com"
+            />
+          </p>
+          <span id="email-error" class="error"></span>
+          <!--User can select a choice from dropdown or enter his own choice but it must be only English
+          letters if typed-->
+          <p>
+            <label for="fav-organization">Favourite Organization:</label>
+            <input
+              id="fav-organization"
+              type="text"
+              name="fav-organization"
+              placeholder="Select or type another"
+              list="fav-organization-list"
+              pattern="[A-Za-z ]+"
+              title="Enter English letters only"
+            />
+
+            <datalist id="fav-organization-list">
+              <option value="UFC"></option>
+              <option value="PFL"></option>
+              <option value="GFL"></option>
+              <option value="Boxer"></option>
+            </datalist>
+          </p>
+          <span id="organization-error" class="error"></span>
+        </fieldset>
+        <!--Only one option can be selected with radio buttons-->
+        <fieldset>
+          <legend>Membership type</legend>
+          <p>
+            <input
+              id="premium"
+              type="radio"
+              name="membership"
+              required
+              value="premium"
+            />
+            <label for="premium">Premium</label>
+          </p>
+          <p>
+            <input id="free" type="radio" name="membership" value="free" />
+            <label for="free">Free</label>
+          </p>
+          <span id="membership-error" class="error"></span>
+        </fieldset>
+        <!--More than one option can be selected with checkboxes-->
+        <fieldset>
+          <legend>What interests you more?</legend>
+          <p>
+            <input
+              id="interest1"
+              type="checkbox"
+              name="interests"
+              value="archives"
+            />
+            <label for="interest1">Fight Archives</label>
+          </p>
+          <p>
+            <input
+              id="interest2"
+              type="checkbox"
+              name="interests"
+              value="streams"
+            />
+            <label for="interest2">Latest Fight Streams</label>
+          </p>
+        </fieldset>
+        <!--Fieldset for text message and reason of contact.-->
+        <fieldset>
+          <legend>Your Message</legend>
+          <p>
+            <label for="contact-reason">Reason for Contacting:</label>
+            <select id="contact-reason" name="contact-reason" required>
+              <option value="" disabled selected>Select a Reason</option>
+              <option value="frontend">Bug in frontend</option>
+              <option value="backend">Bug in backend</option>
+              <option value="support">Customer Support</option>
+              <option value="query">General Query</option>
+            </select>
+          </p>
+          <span id="reason-error" class="error"></span>
+
+          <p>
+            <!-- Message length must be between 10 and 300 characters -->
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              minlength="10"
+              maxlength="300"
+              required
+            ></textarea>
+          </p>
+          <span id="message-error" class="error"></span>
+        </fieldset>
+        <!--Native HTML submit and reset button-->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+
+      <!--This paragraph will tell us the status of the form after submission-->
+      <p id="validation-status"></p>
+
+      <!--This div will be populated by the JS function upon user submission-->
+      <h3 id="h3-output">Your Submission:</h3>
+      <div id="output"></div>
+    </main>
+
+    <!--The footer contains authorship information and my email-->
+    <footer>
+      <p>
+        Author: M. Huzaifah
+        <br />
+        <a class="contact" href="mailto:redacted@redacted.edu"
+          >redacted@redacted.edu</a
+        >
+        <br />
+      </p>
+      <p>This website is built using <mark>HTML</mark> and <mark>CSS</mark>.</p>
+    </footer>
+    <!--This line links the contact.html file to the JavaScript file specified in the source-->
+    <script src="validation.js"></script>
+  </body>
+</html>

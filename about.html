@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <!--This is the about page of our website-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <!--This HTML file is linked to style.css for styling-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--The body element acts like a grid parent-->
+  <body class="grid-parent">
+    <!--Navigation is used in all pages and connects them together-->
+    <nav>
+      <ul>
+        <li><a class="nav-class" href="index.html">Index</a></li>
+        <li><a class="nav-class" href="about.html">About</a></li>
+        <li><a class="nav-class" href="contact.html">Contact</a></li>
+        <li><a class="nav-class" href="latest.html">Latest</a></li>
+        <li><a class="nav-class" href="weather.html">Weather</a></li>
+      </ul>
+    </nav>
+    <header>
+      <img
+        class="logo"
+        src="images/icon.png"
+        alt="Website Main Icon(Fist with MMA written and a dark background"
+      />
+      <h1>WatchMMA: <i>Be fearless</i></h1>
+    </header>
+
+    <main>
+      <!-- Image for about us (Khabib and DC) -->
+      <img
+        class="image"
+        id="img1"
+        src="images/about.jpg"
+        alt="UFC Hall of Fame Winners"
+      />
+      <h2>About WatchMMA</h2>
+
+      <h3><u>Our Origin</u></h3>
+      <p>
+        WatchMMA started operations in 2019. It is the first fighting site in
+        history to have an archive of all old fights. It also does not display
+        ads (thanks to our supporters). We also stream all the latest fights
+        from our own infrastructure. We have a collection of fights from the
+        UFC, PFL, Boxer, and GFL.
+      </p>
+
+      <h3><u>Our Offerings</u></h3>
+      <ul>
+        <li>Old MMA fights</li>
+        <li>Download all fights you can access</li>
+        <li>Premium access option to view the latest fights</li>
+      </ul>
+
+      <!-- Six featured MMA fights displayed in Flexbox cards -->
+      <section class="featured">
+        <h2>Featured</h2>
+        <article class="card">
+          <img
+            src="images/card1.jpg"
+            alt="Khabib vs Mcgregor face off with Dana White in the between them."
+          />
+          <h4>Most viewed UFC Fight</h4>
+          <p>Khabib vs Mcgregor</p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/card2.png"
+            alt="Mcgregor throws a body kick at Max."
+          />
+          <h4>Classic Fight</h4>
+          <p>Mcgregor vs Max 1</p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/card3.png"
+            alt="Ilia Topuria and Justin Gaethje standing in front of the Whitehouse."
+          />
+          <h4>UFC Whitehouse Fight Event</h4>
+          <p>Ilia Topuria vs Justin Gaethje</p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/card4.png"
+            alt="Nurmagomedov and Song fight card image."
+          />
+          <h4>Latest Fight</h4>
+          <p>Nurmagomedov vs. Song</p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/card5.png"
+            alt="Daniel Cormier vs Jon Jones stylish card image."
+          />
+          <h4>Classic Fight</h4>
+          <p>Daniel Cormier vs Jon Jones</p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/card6.png"
+            alt="Alexander Gustafsson and Jon Jones exchange puches."
+          />
+          <h4>Iconic Fight</h4>
+          <p>Jon Jones vs. Alexander Gustafsson</p>
+        </article>
+      </section>
+    </main>
+
+    <!--The footer contains authorship information and my email-->
+    <footer>
+      <p>
+        Author: M. Huzaifah
+        <br />
+        <a class="contact" href="mailto:redacted@redacted.edu"
+          >redacted@redacted.edu</a
+        >
+        <br />
+      </p>
+      <p>This website is built using <mark>HTML</mark> and <mark>CSS</mark>.</p>
+    </footer>
+  </body>
+</html>

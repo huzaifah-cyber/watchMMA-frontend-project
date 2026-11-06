@@ -1,0 +1,275 @@
+/* Body has a dark color with 1em and sans-serif font. It gives a dark background befitting a fighting website*/
+body{
+    background-color: rgb(59, 16, 35);
+    font: 1em sans-serif;
+    color:aliceblue;
+}
+
+/* Oblique font style for h1 with red as background color which gives a sharp contrast and is eye-catching*/
+h1{
+    background-color: rgb(245, 88, 101);
+    font-style: oblique;
+	display: inline;
+}
+
+/* aquamarine color for h2 headings to make it beautiful*/
+h2{
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+/* antiquewhite color for h3 headings */
+h3{
+    color:antiquewhite;
+    text-decoration: underline;
+}
+
+/* Limits content width for readability on large screens */
+main {
+    max-width: 50rem;
+    padding: 1rem;
+}
+
+/* this css rule is for footer color and font style */
+footer{
+    color:hsl(33, 56%, 59%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    border-style: solid;
+    border-radius: 2em;
+    border-color:chocolate;
+    overflow-wrap: break-word;
+}
+
+/* All external links will have gold color to show clearly that this is a link*/
+.contact{
+    color: gold;
+}
+
+/* All navigation will have pink color to improve visibility */
+.nav-class{
+    color: aquamarine;
+    border: 2px solid antiquewhite;
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.5rem;
+}
+
+/* Logo size will be 5 em to clearly show the logo*/
+.logo{
+    width: 5em;
+    margin-left: 1em;
+    display: block;
+}
+
+/* Adds a UFC-style gold border */
+#img1{
+    border: 1em groove yellow;
+    border-radius: 1em;   
+    width: 15em;     
+}
+
+/* Used CSS FlexBox to handle the layout of the navigation links */
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* Allows featured cards to wrap onto additional rows */
+.featured {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+/* Used CSS Flexbox with appropriate FlexBox alignment properties to produce an appropriate layout */
+.card{
+    flex: 1 1 10rem;
+    max-width: 15rem;
+    min-width: 0;
+    padding: 1rem;
+    border: 0.3em solid gold;
+    border-radius: 0.5em;
+}
+
+/* keeps the images within their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Places the featured heading on its own Flexbox row */
+.featured h2 {
+    flex-basis: 100%;
+}
+
+/* Defines the overall structure of the grid and declares the grid areas
+There will be a single column at all times */
+.grid-parent{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer";
+    gap: 0.7em;
+}
+
+/* Assigns each child element in the body element its own grid area */
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; }
+footer { grid-area: footer; }
+
+/* Adding CSS to the ul list to make it better looking */
+#list li{
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.35em;
+}
+
+/* Changes the list markers to arrows */
+#list li::marker {
+    content: "→ ";
+    color: gold;
+}
+
+#list li:hover{
+    background-color: grey;
+    display: inline;
+}
+
+/* Form width max width set */
+#webForm{
+    max-width: 35rem;
+    border: 0.23rem double gold;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    min-width: 0;
+}
+
+/* Groups related fields with a gold border */
+#webForm fieldset {
+    border: 0.1rem dotted antiquewhite;
+    border-radius: 0.5rem;
+    min-width: 0;
+}
+
+/* Highlights each group's heading */
+#webForm legend {
+    color: rgb(27, 218, 154);
+    font-weight: bold;
+}
+
+/* Keeps entry boxes responsive with all screen widths*/
+#webForm input[type="text"],
+#webForm input[type="email"],
+#webForm select,
+#webForm textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+}
+
+/* Adjust the size of the submit and reset buttons*/
+#webForm button {
+    font-size: 1em;
+    margin: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    background-color: aqua;
+}
+
+/* Adds color when hovering over buttons*/
+#webForm button:hover{
+    background-color: gold;
+    cursor: pointer;
+}
+
+/* Preserves the line breaks in submitted information */
+#output {
+    white-space: pre-line;
+    line-height: 2.0;
+    border: 0.2rem solid antiquewhite;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    min-width: 0;
+    max-width: 34rem;
+    overflow-wrap: break-word;
+    padding: 1rem;
+}
+
+#output:empty {
+    display: none;
+}
+
+#h3-output{
+    display: none;
+}
+
+.error, #validation-status.error, #weather-error{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 72%, 56%);
+    color: white;
+    display: inline;
+}
+
+#validation-status.pass{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(123, 189, 23);
+    color: rgb(255, 255, 255);
+    display: inline;
+}
+
+#validation-status{
+    margin: 1rem;
+}
+
+.card:hover{
+    background-color: rgb(178, 19, 43);
+    cursor:pointer;
+}
+
+#weather{
+    color: black;
+    zoom: 120%;
+    border: 0.2rem solid gold;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    min-width: 0;
+    max-width: 34rem;
+    overflow-wrap: break-word;
+    padding: 1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #06e1a7, #5b548a);
+}
+
+#weather:hover{
+    background: linear-gradient(135deg, #00feba, #5b548a);
+}
+
+#weather button:hover{
+    background: linear-gradient(135deg, #00feba, #5b548a);
+}
+
+#weather-error{
+    margin-top: 1rem;
+    display: none;
+}
+
+#weather-h3{
+    /*display:*/ 
+    color: greenyellow;
+}
+
+/* Hides weather information until the API request succeeds */
+#weather-results[hidden] {
+    display: none;
+}
